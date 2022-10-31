@@ -1,0 +1,152 @@
+Ainda precisa corrigir o erro de qualquer cpf poder entregar a chave e o erro de cpf entregar mesmo não tendo armário ocupado. 
+
+Quando dois cpfs estão ocupando armários os mesmos podem devolver qualquer armário então deve-se restringir essa situação
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      <h1 class="mt-5"> Armários Ocupados </h1>
+ <table class="table table-dark table-hover">
+     <tr>
+      
+      <th scope="col">CPF</th>
+      <th scope="col">Armários</th>
+      <th scope="col">Datas</th>
+      <th scope="col">Horário</th>
+     
+    </tr>
+<?php foreach($lista1 as $estoque) : ?>
+     <tr>
+      <td><?=$estoque['cpf'];?></td>
+      <td><?=$estoque['acao'];?></td>
+      <td><?=$estoque['datas'];?></td>
+      <td><?=$estoque['hora'];?></td>
+     </tr>  
+     
+<?php endforeach; ?>
+</table>
+    </div>
+    <div class="col-6">
+      <h1 class="mt-5"> Relatório </h1>
+ <table class="table table-dark table-hover">
+     <tr>
+      
+      <th scope="col">CPF</th>
+      <th scope="col">Ação</th>
+      <th scope="col">Datas</th>
+      <th scope="col">Horário</th>
+     
+    </tr>
+<?php foreach($lista as $movimentos) : ?>
+     <tr>
+      <td><?=$movimentos['cpf'];?></td>
+      <td><?=$movimentos['armario'];?></td>
+      <td><?=$movimentos['data'];?></td>
+      <td><?=$movimentos['hora'];?></td>
+     </tr>  
+     
+<?php endforeach; ?>
+</table>
+    </div>
+    <div class="col">
+      3 of 3
+    </div>
+  </div> 
+
+
+
+
+
+  <div class="container text-center">
+ <h1 class="mt-5"> Armários Ocupados </h1>
+ <table class="table table-dark table-hover">
+     <tr>
+      
+      <th scope="col">CPF</th>
+      <th scope="col">Armários</th>
+      <th scope="col">Datas</th>
+      <th scope="col">Horário</th>
+     
+    </tr>
+<?php foreach($lista1 as $estoque) : ?>
+     <tr>
+      <td><?=$estoque['cpf'];?></td>
+      <td><?=$estoque['acao'];?></td>
+      <td><?=$estoque['datas'];?></td>
+      <td><?=$estoque['hora'];?></td>
+     </tr>  
+     
+<?php endforeach; ?>
+</table>
+
+  </div>
+ 
+ <div class="container text-center">
+ <h1 class="mt-5"> Relatório </h1>
+ <table class="table table-dark table-hover">
+     <tr>
+      
+      <th scope="col">CPF</th>
+      <th scope="col">Ação</th>
+      <th scope="col">Datas</th>
+      <th scope="col">Horário</th>
+     
+    </tr>
+<?php foreach($lista as $movimentos) : ?>
+     <tr>
+      <td><?=$movimentos['cpf'];?></td>
+      <td><?=$movimentos['armario'];?></td>
+      <td><?=$movimentos['data'];?></td>
+      <td><?=$movimentos['hora'];?></td>
+     </tr>  
+     
+<?php endforeach; ?>
+</table>
+
+  </div>   
+
+
+
+
+
+
+     <!--<div class="col-6">
+      <h1 class="mt-5"> Armários vazios </h1>
+ <table class="table table-dark table-hover">
+     
+<?php foreach($lista2 as $armarios) : ?>
+     <tr>
+      <td><?=$armarios['armario'];?></td>
+     </tr>  
+     
+<?php endforeach; ?>
+</table>
+    </div>-->  
+
+
+
+
+
+
+      <div class="col">
+    <h1 class="mt-5"> Relatório </h1>
+     <table class="table table-dark table-hover">
+
+     <?php if(!$lista) :?>
+     <tr>
+     <td>Nenhum registro</td>
+     </tr>
+     <?php endif ;?>
+
+     <?php foreach($lista as $movimentos) : ?>
+     <tr>
+      <td><?=$movimentos['cpf'];?></td>
+      <td><?=$movimentos['armario'];?></td>
+      <td><?=$movimentos['data'];?></td>
+      <td><?=$movimentos['hora'];?></td>
+     </tr>  
+     
+     <?php endforeach; ?>
+     </table>
+    </div>
+  
