@@ -376,7 +376,12 @@ $sql1 = $pdo->prepare("DELETE FROM estoque WHERE acao = :acao");
      <?php endif ;?>
 
      <?php foreach($lista as $movimentos) : ?>
-     <tr>
+     <tr> 
+     <?php foreach($lista3 as $promotores) : ?>
+      <?php if($movimento['cpf'] == $promotores['cpf']) :?> 
+      <td><?=$promotores['nome'];?></td> 
+      <?php endif ;?> 
+      <?php endforeach; ?>
       <td><?=$movimentos['cpf'];?></td>
       <td><?=$movimentos['armario'];?></td>
       <td><?=$movimentos['data'];?></td>
